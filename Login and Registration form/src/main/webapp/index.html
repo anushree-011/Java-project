@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="style.css">
+
+<script type=text/javascript>
+function validate(){
+	var name=document.getElementById("user").value;
+	var pass=document.getElementById("pass").value;
+	if(name==""){
+		alert("Please Enter your name")
+		return false;
+	}
+	if(pass==""){
+		alert("Please Enter your password");
+		return false;
+	}
+	return true;
+}
+</script>
+</head>
+<body>
+<div class="login">
+
+<h1 align=center>Login Form</h1>
+<form action="Validation" onsubmit="return validate()" method="get">
+<table align=center>
+			<tr>
+			<td>Username</td>
+			<td><input type="text" id="user" name="uname"></td>
+			</tr>
+			<tr>
+			<td>Password</td>
+			<td><input type="password" id="pass" name="pwd"></td>
+			</tr>
+			<tr>
+			<td></td>
+			<td><input type="submit"></td>
+			<td><a href="Newuser.html">Sign up</a></td>
+			</tr>
+</table>
+</form>
+</div>
+</body>
+</html>
