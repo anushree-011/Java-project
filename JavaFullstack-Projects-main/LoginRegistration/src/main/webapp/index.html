@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+<style type="text/css">
+	.hello {
+		background-color: beige;
+		
+	}
+</style>
+<script type="text/javascript">
+	function myfunction() {
+		let A = document.getElementById("uname").value;
+		let B = document.getElementById("pass").value;
+		if(A=="" && B==""){
+			alert("Please enter the username & Password");
+			return false
+		}
+		else if(B==""){
+			alert("Please enter the password");
+			return false
+		}else if(A==""){
+			alert("Please enter the Username");
+			return false
+		}
+	}
+	 </script>
+</head>
+<body class="hello">
+<h1 align = "center">Login Form</h1>
+<form action="validation" onsubmit="return myfunction()" method="get">
+	<table align="center">
+	<tr>
+		<td>Username</td>
+		<td><input type = "text" id="uname" placeholder = "Enter the username" name="uname"/></td>
+	</tr>
+	<tr>
+		<td>Password</td>
+		<td><input type = "password" id="pass" placeholder = "enter the password" name="passw"/></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><input type = "submit"/></td>
+		<td><a href = "newuser.html">Sign up</a></td>
+	</tr>
+</table>
+	</form>
+</body>
+</html>

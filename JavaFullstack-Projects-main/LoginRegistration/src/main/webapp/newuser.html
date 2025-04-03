@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+<style type="text/css">
+	.hello {
+		background-color: beige;
+		
+	}
+</style>
+<script type="text/javascript">
+	function myfunction() {
+		let A = document.getElementById("usname").value;
+		let B = document.getElementById("passw").value;
+		let C = document.getElementById("rep").value;
+		if(A=="" && B==""){
+			alert("Please enter the username & Password");
+			return false
+		}
+		else if(B==""){
+			alert("Please enter the password");
+			return false
+		}else if(A==""){
+			alert("Please enter the Username");
+			return false
+		}
+		else if(C==""){
+			alert("Plese Re enter the password")
+			return false
+		}
+		else if(A!=""&& B!="" && C!="" && B!=C){
+			alert(`Password does not match.
+				   Please enter Correctly`)
+		    return false
+		}
+	}
+	 </script>
+</head>
+<body class="hello">
+<h1 align = "center">Login Form</h1>
+<form action="adduserdetails" onsubmit="return myfunction()" method = "post">
+	<table align="center">
+	<tr>
+		<td>Username</td>
+		<td><input type = "text" id="usname" placeholder = "Enter the username" name = "u"/></td>
+	</tr>
+	<tr>
+		<td>Password</td>
+		<td><input type = "password" id="passw" placeholder = "Enter the password" name = "p"/></td>
+	</tr>
+	<tr>
+		<td>Confirm Password</td>
+		<td><input type = "password" id="rep" placeholder = "Re Enter the password" name = "cp"/></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><input type = "submit"/></td>
+	</tr>
+</table>
+	</form>
+</body>
+</html>
